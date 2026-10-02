@@ -1,0 +1,39 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Helper: signed-in user
+    function isSignedIn() {
+      return request.auth != null;
+    }
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    // users/{uid} – only owner can write; any signed-in user can read token/phone for SOS
+    match /users/{uid} {
+      allow read: if isSignedIn();
+      allow create, update: if isOwner(uid);
+      allow delete: if isOwner(uid);
+
+      match /contacts/{contactId} {
+        allow read, write: if isOwner(uid);
+      }
+    }
+
+    // phoneIndex/{phone} – needed so contacts can be added by phone number
+    // Owner writes their own mapping; signed-in users can read to resolve phone → uid
+    match /phoneIndex/{phone} {
+      allow read: if isSignedIn();
+      allow write: if isSignedIn()
+                   && request.resource.data.uid == request.auth.uid;
+    }
+
+    // sos/{uid} – owner writes their SOS; any signed-in user can read
+    // (in practice only contacts listen; locked down further with App Check optional)
+    match /sos/{uid} {
+      allow read: if isSignedIn();
+      allow write: if isOwner(uid);
+    }
+  }
+}

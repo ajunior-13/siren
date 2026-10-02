@@ -1,0 +1,3 @@
+-keep class com.resqlink.emergency.** { * }
+-dontwarn com.google.firebase.**
+-dontwarn com.google.android.gms.**
