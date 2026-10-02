@@ -23,8 +23,12 @@ jobs:
       - name: Setup Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Accept Android licenses
+      - name: Accept licenses
         run: yes | sdkmanager --licenses || true
+
+      - name: Install required SDK packages
+        run: |
+          sdkmanager "platform-tools" "platforms;android-34" "build-tools;34.0.0" || true
 
       - name: Create local.properties
         run: echo "sdk.dir=$ANDROID_HOME" > local.properties
@@ -34,22 +38,17 @@ jobs:
 
       - name: Build Debug APK
         run: |
-          if [ -f ./gradlew ]; then
-            ./gradlew assembleDebug --stacktrace --no-daemon
-          else
-            echo "gradlew missing – trying direct gradle"
-            gradle assembleDebug --stacktrace || exit 1
-          fi
+          ./gradlew assembleDebug --stacktrace --no-daemon
 
-      - name: List APK
-        run: find app/build/outputs -name "*.apk" -type f || true
+      - name: Find APK
+        run: find . -name "*.apk" -type f || true
 
-      - name: Upload APK artifact
+      - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: Siren-debug-apk
           path: |
             app/build/outputs/apk/debug/*.apk
-            app/build/outputs/apk/**/*.apk
+            **/outputs/apk/**/*.apk
           if-no-files-found: warn
           retention-days: 14
