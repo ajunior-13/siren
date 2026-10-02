@@ -31,11 +31,18 @@ jobs:
       - name: Create local.properties
         run: echo "sdk.dir=$ANDROID_HOME" > local.properties
 
-      - name: Make gradlew executable
-        run: chmod +x ./gradlew || true
+      - name: Generate Gradle Wrapper
+        run: |
+          gradle wrapper --gradle-version 8.2 || true
+          chmod +x gradlew || true
 
       - name: Build Debug APK
-        run: ./gradlew assembleDebug --stacktrace --no-daemon
+        run: |
+          if [ -f ./gradlew ]; then
+            ./gradlew assembleDebug --stacktrace --no-daemon
+          else
+            gradle assembleDebug --stacktrace --no-daemon
+          fi
 
       - name: Find APK
         run: find . -name "*.apk" -type f || true
