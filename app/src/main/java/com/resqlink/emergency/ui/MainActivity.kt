@@ -10,7 +10,7 @@ import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.Surface
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.Modifier.modifier
 import androidx.core.content.ContextCompat
 import com.resqlink.emergency.ui.screens.MainScreen
 import com.resqlink.emergency.ui.theme.SirenTheme
