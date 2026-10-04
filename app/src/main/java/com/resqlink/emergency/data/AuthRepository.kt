@@ -1,4 +1,4 @@
-package com.resqlink.emergency.data
+package com.Siren.Siren.data
 
 import android.app.Activity
 import com.google.firebase.FirebaseException
