@@ -1,4 +1,4 @@
-package com.resqlink.emergency.data
+package com.Siren.Siren.data
 
 import android.content.Context
 import android.content.Intent
