@@ -1,4 +1,4 @@
-package com.resqlink.emergency.ui
+package com.Siren.Siren.ui
 
 import android.Manifest
 import android.content.pm.PackageManager
