@@ -9,8 +9,8 @@ import android.os.Build
 import androidx.core.app.NotificationCompat
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
-import com.resqlink.emergency.SirenApplication
-import com.resqlink.emergency.ui.SosAlertActivity
+import com.Siren.Siren.SirenApplication
+import com.Siren.Siren.ui.SosAlertActivity
 
 /**
  * When app is closed / backgrounded, FCM still arrives here.
