@@ -1,4 +1,4 @@
-package com.resqlink.emergency.ui.theme
+package com.Siren.Siren.ui.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.darkColorScheme
