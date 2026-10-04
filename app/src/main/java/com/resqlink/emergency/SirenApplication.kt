@@ -1,4 +1,4 @@
-package com.resqlink.emergency
+package com.Siren.Siren
 
 import android.app.Application
 import android.app.NotificationChannel
