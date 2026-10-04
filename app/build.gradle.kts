@@ -5,11 +5,11 @@ plugins {
 }
 
 android {
-    namespace = "com.resqlink.emergency"
+    namespace = "com.Siren.Siren"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.resqlink.emergency"
+        applicationId = "com.Siren.Siren"
         minSdk = 26
         targetSdk = 34
         versionCode = 5
