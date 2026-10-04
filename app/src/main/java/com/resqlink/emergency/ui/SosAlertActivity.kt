@@ -1,4 +1,4 @@
-package com.resqlink.emergency.ui
+package com.Siren.Siren.ui
 
 import android.app.KeyguardManager
 import android.content.Intent
@@ -13,14 +13,14 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
-import androidx.compose.ui.Modifier.Modifier
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.resqlink.emergency.data.SirenPlayer
-import com.resqlink.emergency.ui.theme.SirenTheme
+import com.Siren.Siren.data.SirenPlayer
+import com.Siren.Siren.ui.theme.SirenTheme
 
 /**
  * Full-screen SOS screen that can appear over the lock screen when FCM arrives.
