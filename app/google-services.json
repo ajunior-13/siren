@@ -1,20 +1,28 @@
 {
   "project_info": {
-    "project_number": "REPLACE_ME",
-    "project_id": "REPLACE_WITH_YOUR_FIREBASE_PROJECT_ID",
-    "storage_bucket": "REPLACE_WITH_YOUR_FIREBASE_PROJECT_ID.appspot.com"
+    "project_number": "526927594003",
+    "project_id": "siren-1353c",
+    "storage_bucket": "siren-1353c.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:REPLACE:android:REPLACE",
+        "mobilesdk_app_id": "1:526927594003:android:005afcf8aa948ef0c8f5e6",
         "android_client_info": {
-          "package_name": "com.resqlink.emergency"
+          "package_name": "com.Siren.Siren"
         }
       },
       "oauth_client": [],
-      "api_key": [{ "current_key": "REPLACE_ME" }],
-      "services": { "appinvite_service": { "other_platform_oauth_client": [] } }
+      "api_key": [
+        {
+          "current_key": "AIzaSyBDI4JzN2w0ctgnbehKuc2_EmA-HCkxs2s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
     }
   ],
   "configuration_version": "1"
