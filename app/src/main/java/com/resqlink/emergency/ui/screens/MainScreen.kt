@@ -373,7 +373,7 @@ fun MainScreen(activity: Activity) {
                         colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface),
                         modifier = Modifier.fillMaxWidth()
                     ) {
-                        Column(Modifier = Modifier.padding(16.dp)) {
+                        Column(modifier = Modifier.padding(16.dp)) {
                             Text("Your live location", fontWeight = FontWeight.Bold, color = Color.White)
                             Text("Lat: ${"%.5f".format(latitude)}", color = Color.LightGray, fontSize = 13.sp)
                             Text("Lng: ${"%.5f".format(longitude)}", color = Color.LightGray, fontSize = 13.sp)
@@ -385,7 +385,7 @@ fun MainScreen(activity: Activity) {
                     }
                 }
 
-                1 -> Column(Modifier = Modifier.fillMaxSize().padding(16.dp)) {
+                1 -> Column(modifier = Modifier.fillMaxSize().padding(16.dp)) {
                     Text("Emergency Contacts", fontSize = 20.sp, fontWeight = FontWeight.Bold, color = Color.White)
                     Text(
                         "They must log in to Siren once first. Then add their number here.",
