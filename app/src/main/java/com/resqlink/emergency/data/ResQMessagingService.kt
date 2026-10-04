@@ -1,4 +1,4 @@
-package com.resqlink.emergency.data
+package com.Siren.Siren.data
 
 import android.app.NotificationManager
 import android.app.PendingIntent
