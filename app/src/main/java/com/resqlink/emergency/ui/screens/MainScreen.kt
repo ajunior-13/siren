@@ -1,4 +1,4 @@
-package com.resqlink.emergency.ui.screens
+package com.Siren.Siren.ui.screens
 
 import android.app.Activity
 import android.content.Intent
@@ -18,12 +18,12 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.resqlink.emergency.data.AuthRepository
-import com.resqlink.emergency.data.EmergencyContact
-import com.resqlink.emergency.data.FirestoreRepository
-import com.resqlink.emergency.data.LocationService
-import com.resqlink.emergency.data.SirenPlayer
-import com.resqlink.emergency.data.VoiceCommandService
+import com.Siren.Siren.data.AuthRepository
+import com.Siren.Siren.data.EmergencyContact
+import com.Siren.Siren.data.FirestoreRepository
+import com.Siren.Siren.data.LocationService
+import com.Siren.Siren.data.SirenPlayer
+import com.Siren.Siren.data.VoiceCommandService
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
