@@ -215,7 +215,7 @@ fun MainScreen(activity: Activity) {
                 verticalArrangement = Arrangement.Center
             ) {
                 Text("Siren", fontSize = 28.sp, fontWeight = FontWeight.Bold, color = Color.White)
-                Text("Siren login", fontSize = 14.sp, color = Color.Gray)
+                Text("OTP Login", fontSize = 14.sp, color = Color.Gray)
                 Spacer(modifier = Modifier.height(28.dp))
 
                 OutlinedTextField(
