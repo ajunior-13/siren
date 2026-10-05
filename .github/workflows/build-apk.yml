@@ -36,11 +36,14 @@ jobs:
         with:
           gradle-version: '8.2'
 
-      - name: Print SHA-1
+      - name: Create debug keystore + Print SHA-1
         run: |
+          echo "===== Creating debug keystore ====="
+          mkdir -p ~/.android
+          keytool -genkey -v -keystore ~/.android/debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+          
           echo "===== SHA-1 Fingerprint ====="
-          keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android || true
-          gradle signingReport || true
+          keytool -list -v -keystore ~/.android/debug.keystore -alias androiddebugkey -storepass android -keypass android
 
       - name: Build Debug APK
         run: gradle assembleDebug --stacktrace --no-daemon
